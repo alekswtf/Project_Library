@@ -1,0 +1,106 @@
+.favorites {
+	background-color: $white-color;
+	max-height: 1440px;
+	text-align: center;
+  
+	h2 {
+	  font: {
+		family: $font-title;
+		size: 40px;
+	  }
+	  color: $main-color;
+	  line-height: 100%;
+	  letter-spacing: 0.05em;
+	  text-transform: capitalize;
+	  margin-top: 20px;
+	}
+  
+	&-text {
+	  font: {
+		family: $font-regular;
+		weight: bold;;
+		size: 20px;
+	  }
+	  text-align: start;
+	  color: $black-color;
+	  margin-bottom: 40px;
+	}
+  
+	.line-favorites {
+	  width: 50px;
+	  height: 1px;
+	  background: $main-color;
+	  margin: 20px auto 0;
+	  display: block;
+	}	
+}
+
+.radio-container {
+	font: {
+	  family: $font-regular;
+	  size: 20px;
+	}
+	text-align: start;
+	color: $black-color;
+	margin-bottom: 40px;
+  }
+
+  
+  input[type="radio"] {
+	&:checked + label {
+	  font-weight: bold;
+	}
+	margin-right: 20px;
+	appearance: none;
+	border: 2px solid $black-color;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	position: relative;
+  
+	&:checked::before {
+	  content: "";
+	  display: block;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: 8px;
+	  height: 8px;
+	  background-color: #000;
+	  border-radius: 50%;
+	}
+  }
+
+
+.radio-box {
+	display: flex;
+    align-items: center;
+	margin-top: 30px;
+    gap: 120px;
+	legend {
+		margin-bottom: 40px;
+		font-weight: bold;
+	}
+}
+
+
+.book-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 260px;
+    row-gap: 40px;
+}
+
+.card {
+	width: 555px;
+	height: 555px;
+	border: solid 1px $black-color;
+  
+	img {
+	  width: 200px;
+	  height: 300px;
+	}
+  }

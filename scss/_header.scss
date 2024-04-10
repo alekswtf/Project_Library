@@ -1,0 +1,53 @@
+header {
+	position: relative;
+	height: 90px;
+	background-color: $main-color;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 20px 0px 20px;
+  
+	.hamburger {
+	  display: none;
+	}
+  
+	.name-text {
+	  color: $white-color;
+	  text-decoration: none;
+	  letter-spacing: 0.02em;
+	  font: {
+		family: $font-title;
+		size: 30px;
+		weight: 400;
+	  }
+	}
+	
+	.menu-container {
+		display: flex;
+    	flex-direction: row;
+    	align-items: center;
+    	gap: 30px;
+	}
+
+	.menu {
+	  font-family: $font-regular;
+	  margin: 0;
+	  list-style-type: none;
+	  gap: 30px;
+	  display: flex;
+  
+	  &_link {
+		color: $white-color;
+		text-decoration: none;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 250%;
+  
+		&:hover {
+		  text-decoration: none;
+		  color: $brown-color;
+		}
+	  }
+	}
+  }
+ 

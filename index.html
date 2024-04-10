@@ -6,11 +6,11 @@
   <title>Library</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 
   
@@ -20,7 +20,9 @@
   <div class="container">
     <header>
           <div class="name-page"><a href="#" class="name-text">Brooklyn Public Library </a></div>
-      <nav>    
+      
+      <div class="menu-container">    
+        <nav>    
           <ul class="menu">
             <li class="menu_item"><a href="#" class="menu_link">About</a></li>
             <li class="menu_item"><a href="#" class="menu_link">Favorites</a></li>
@@ -29,9 +31,9 @@
             <li class="menu_item"><a href="#" class="menu_link">Library card</a></li>
         </ul>
         <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+                <span class="menu_line"></span>
+                <span class="menu_line"></span>
+                <span class="menu_line"></span>
         </div>
 
            <!--  <div class="mobile-menu">
@@ -44,10 +46,12 @@
               </ul>
           </div> -->
 
-      </nav>
-      <a href="#" class="header_logo">
-        <img src="./icons/icon_profile.png" alt="logo">
-      </a>
+          </nav>
+          <a href="#" class="header_logo">
+            <img src="./icons/icon_profile.png" alt="logo">
+          </a>
+        </div>
+      
 
     </header>
   </div>
@@ -63,7 +67,7 @@
 
   <div class="container">
     <section class="about">
-      <h1>About</h1>
+      <h2>About</h2>
       <span class="line-about"></span>
       <p  class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
       <div class="carousel">
@@ -88,6 +92,8 @@
             <span class="slide-pagination"></span>
             <span class="slide-pagination"></span>
             <span class="slide-pagination"></span>
+            <span class="slide-pagination-hide"></span>
+            <span class="slide-pagination-hide"></span>
           </div>
 
       </div>
@@ -96,9 +102,188 @@
 
   <div class="container">
     <section class="favorites">
-      <h1>Favorites</h1>
+      <h2>Favorites</h2>
       <span class="line-favorites"></span>
-      <p class="favorites-text">Pick favorites of season</p>
+
+      <div class="radio-container">
+          <fieldset class="radio-box">
+            <legend>Pick favorites of season</legend>
+          
+            <div>
+              <input type="radio" id="winter" name="seasone" value="1" checked />
+              <label for="huey">Winter</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="spring" name="seasone" value="2" />
+              <label for="dewey">Spring</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="summer" name="seasone" value="3" />
+              <label for="louie">Summer</label>
+            </div>
+
+            <div>
+              <input type="radio" id="autumn" name="seasone" value="4" />
+              <label for="louie">Autumn</label>
+            </div>
+          </fieldset>
+      </div>  
+
+      <div class="book-cards">
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p>Staff Picks
+            The Book Eaters
+            By Sunyi Dean
+            An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
+            Buy</p>
+          <button>Buy</button>
+          <img src="./img/books/winter/book_1.png" alt="book-1">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/winter/book_2.png" alt="book-2">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/winter/book_3.png" alt="book-3">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/winter/book_4.png" alt="book-4">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/spring/book_1.png" alt="book-1">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/spring/book_2.png" alt="book-2">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/spring/book_3.png" alt="book-3">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/spring/book_4.png" alt="book-4">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/summer/book_1.png" alt="book-1">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/summer/book_2.png" alt="book-2">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/summer/book_3.png" alt="book-3">
+          
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/summer/book_4.png" alt="book-4">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/autumn/book_1.png" alt="book-1">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/autumn/book_2.png" alt="book-2">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/autumn/book_3.png" alt="book-3">
+        </div>
+
+        <div class="card">
+          <h3>Staff Picks</h3>
+          <span class="line-book"></span>
+          <h4></h4>
+          <p></p>
+          <button>Buy</button>
+          <img src="./img/books/autumn/book_4.png" alt="book-4">
+        </div>
+      </div>
+
+      
+    
 
       
     </section>

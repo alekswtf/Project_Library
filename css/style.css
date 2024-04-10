@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 768px;
+  margin: 0 auto;
+}
+
+.forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-uniquifier {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+header {
+  position: relative;
+  height: 90px;
+  background-color: #0C0C0E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+}
+header .hamburger {
+  display: none;
+}
+header .name-text {
+  color: #FFFFFF;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  font-family: "Forum", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+header .menu-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+header .menu {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  list-style-type: none;
+  gap: 30px;
+  display: flex;
+}
+header .menu_link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 250%;
+}
+header .menu_link:hover {
+  text-decoration: none;
+  color: #BB945F;
+}
+
+.welcome {
+  min-height: 600px;
+  background: url("/img/welcome_bg.jpg") center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.welcome .welcome-overlay {
+  background: url("/img/overlay.png");
+  min-height: 300px;
+}
+.welcome .welcome-text {
+  width: 600px;
+  height: 220px;
+  background-color: #000000;
+  padding: 33px 110px 40px 115px;
+  margin-top: -80px;
+}
+.welcome .welcome-text h1 {
+  font-family: "Forum", sans-serif;
+  font-weight: 200;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 125%;
+  letter-spacing: 0.07em;
+}
+
+.about {
+  background-color: #FFFFFF;
+  min-height: 837px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about h2 {
+  font-family: "Forum", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #0C0C0E;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+.about-text {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 200%;
+  text-align: center;
+  color: #000000;
+  margin-top: 40px;
+}
+.about .line-about {
+  width: 50px;
+  height: 1px;
+  background: #0C0C0E;
+  margin-top: 30px;
+}
+
+.carousel {
+  padding: 15px 0;
+}
+.carousel .carousel-inner {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.carousel .carousel-pagination {
+  margin-top: 15px;
+}
+.carousel .slide-pagination {
+  display: inline-block;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #0C0C0E;
+}
+.carousel .slide-pagination:hover {
+  background-color: #BB945F;
+  cursor: pointer;
+}
+
+.favorites {
+  background-color: #FFFFFF;
+  max-height: 1440px;
+  text-align: center;
+}
+.favorites h2 {
+  font-family: "Forum", sans-serif;
+  font-size: 40px;
+  color: #0C0C0E;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+.favorites-text {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: start;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.favorites .line-favorites {
+  width: 50px;
+  height: 1px;
+  background: #0C0C0E;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.radio-container {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-align: start;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+input[type=radio] {
+  margin-right: 20px;
+  appearance: none;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+}
+input[type=radio]:checked + label {
+  font-weight: bold;
+}
+input[type=radio]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.radio-box {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 120px;
+}
+.radio-box legend {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 260px;
+  row-gap: 40px;
+}
+
+.card {
+  width: 555px;
+  height: 555px;
+  border: solid 1px #000000;
+}
+.card img {
+  width: 200px;
+  height: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */

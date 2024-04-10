@@ -1,0 +1,70 @@
+.about {
+	background-color: $white-color;
+	min-height: 837px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  
+	h2 {
+	  font: {
+		family: $font-title;
+		weight: 400;
+		size: 40px;
+	  }
+	  color: $main-color;
+	  line-height: 100%;
+	  letter-spacing: 0.05em;
+	  text-transform: capitalize;
+	  margin-top: 20px;
+	}
+  
+	&-text {
+	  font: {
+		family: $font-regular;
+		size: 20px;
+	  }
+	  line-height: 200%;
+	  text-align: center;
+	  color: $black-color;
+	  margin-top: 40px;
+	}
+  
+	.line-about {
+	  width: 50px;
+	  height: 1px;
+	  background: $main-color;
+	  margin-top: 30px;
+	}
+  }
+  
+  .carousel {
+	padding: 15px 0;
+  
+	.carousel-inner {
+	  position: relative;
+	  margin: 0 auto;
+	  display: flex;
+	  gap: 25px;
+	  align-items: flex-end;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: space-evenly;
+	}
+  
+	.carousel-pagination {
+	  margin-top: 15px;
+	}
+  
+	.slide-pagination {
+	  display: inline-block;
+	  border-radius: 50%;
+	  width: 16px;
+	  height: 16px;
+	  background-color: $main-color;
+  
+	  &:hover {
+		background-color: $brown-color;
+		cursor: pointer;
+	  }
+	}
+  }
