@@ -335,74 +335,10 @@ input[type=radio]:checked::before {
   font-size: 20px;
   line-height: 200%;
   letter-spacing: 0.1em;
-  margin-top: 30px;
+  text-transform: capitalize;
   text-align: center;
   color: #000000;
+  text-transform: uppercase;
 }
 
-.prices {
-  display: grid;
-  grid-template-columns: repeat(2, 500px);
-  justify-content: space-between;
-  margin-top: 40px;
-}
-.prices h3 {
-  font-family: "Forum", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0.05em;
-  text-transform: capitalize;
-  color: #BB945F;
-}
-.prices p {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  line-height: 200%;
-  letter-spacing: 0.1em;
-  color: #000000;
-}
-.prices hr {
-  border: 1px solid #BB945F;
-  width: 100px;
-  height: 0px;
-  margin-right: 60px;
-}
-.prices .prices-drinks {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-.prices .prices-desserts {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.price {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.contacts {
-  max-height: 575px;
-  background-color: #FFFFFF;
-  text-align: center;
-}
-.contacts h2 {
-  font-family: "Forum", sans-serif;
-  font-size: 40px;
-  color: #0C0C0E;
-  line-height: 100%;
-  letter-spacing: 0.05em;
-  text-transform: capitalize;
-  margin-top: 70px;
-}
-.contacts hr {
-  width: 50px;
-  height: 1px;
-  background: #0C0C0E;
-  margin-top: 30px;
-}
+/*# sourceMappingURL=style.css.map */
