@@ -406,3 +406,70 @@ input[type=radio]:checked::before {
   background: #0C0C0E;
   margin-top: 30px;
 }
+
+.contacts-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 200%;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  color: #000000;
+}
+.text-info h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 200%;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  color: #000000;
+  text-align: left;
+}
+
+.phone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.staff-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.staff-info span {
+  font-weight: 400;
+}
+
+.lybrarycard {
+  max-height: 575px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+.lybrarycard h2 {
+  font-family: "Forum", sans-serif;
+  font-size: 40px;
+  color: #0C0C0E;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  margin-top: 70px;
+}
+.lybrarycard hr {
+  width: 50px;
+  height: 1px;
+  background: #0C0C0E;
+  margin-top: 30px;
+}

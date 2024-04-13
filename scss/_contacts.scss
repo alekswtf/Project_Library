@@ -20,3 +20,53 @@
         margin-top: 30px;
       }	
 }    
+
+.contacts-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.text-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font: {
+        size: 20px;
+        weight: 400;
+        family: $font-regular;
+    }
+    line-height: 200%;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: $black-color;
+    h3 {
+        font: {
+            family: $font-regular;
+            size: 20px;
+            weight: bold;
+          }
+        line-height: 200%;
+        letter-spacing: 0.1em;
+        text-transform: capitalize;
+        color: $black-color;
+        text-align: left;
+    }
+}
+
+.phone-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    span {
+        font-weight: 400;
+    }
+}
