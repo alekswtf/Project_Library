@@ -2,7 +2,7 @@
 	background-color: $white-color;
 	max-height: 1440px;
 	text-align: center;
-  
+	margin-top: 10px;
 	h2 {
 	  font: {
 		family: $font-title;
@@ -12,7 +12,7 @@
 	  line-height: 100%;
 	  letter-spacing: 0.05em;
 	  text-transform: capitalize;
-	  margin-top: 20px;
+	  
 	}
   
 	&-text {
