@@ -143,16 +143,20 @@ header .menu_link:hover {
 .carousel .carousel-pagination {
   margin-top: 15px;
 }
-.carousel .slide-pagination {
+.carousel button {
   display: inline-block;
   border-radius: 50%;
   width: 16px;
   height: 16px;
   background-color: #0C0C0E;
+  border: none;
 }
-.carousel .slide-pagination:hover {
+.carousel button:hover {
   background-color: #BB945F;
   cursor: pointer;
+}
+.carousel .slide-pagination-hide {
+  display: none;
 }
 
 .favorites {

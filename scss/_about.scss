@@ -54,16 +54,19 @@
 	  margin-top: 15px;
 	}
   
-	.slide-pagination {
+	button {
 	  display: inline-block;
 	  border-radius: 50%;
 	  width: 16px;
 	  height: 16px;
 	  background-color: $main-color;
-  
+	  border: none;
 	  &:hover {
 		background-color: $brown-color;
 		cursor: pointer;
 	  }
+	}
+	.slide-pagination-hide {
+		display: none;
 	}
   }
