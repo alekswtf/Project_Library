@@ -235,7 +235,7 @@ input[type=radio]:checked::before {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  column-gap: 210px;
+  column-gap: 200px;
   row-gap: 40px;
 }
 
