@@ -2,7 +2,7 @@
 	background-color: $white-color;
 	max-height: 1440px;
 	text-align: center;
-	margin-top: 10px;
+	padding: 20px;
 	h2 {
 	  font: {
 		family: $font-title;
@@ -88,7 +88,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    column-gap: 260px;
+    column-gap: 210px;
     row-gap: 40px;
 }
 
@@ -104,7 +104,7 @@
 		height: 300px;
 		position: relative;
 		left: 217px;
-		bottom: 287px;
+		bottom: 288px;
 	  }
 }
 
