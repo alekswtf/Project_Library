@@ -6,11 +6,14 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0px 20px 0px 20px;
-  
+		
 	.hamburger {
 	  display: none;
 	}
-  
+	.mobile-menu {
+		display: none;
+	}
+
 	.name-text {
 	  color: $white-color;
 	  text-decoration: none;
@@ -27,6 +30,10 @@ header {
     	flex-direction: row;
     	align-items: center;
     	gap: 30px;
+
+		.header_logo {
+				z-index: 3;
+		}
 	}
 
 	.menu {
@@ -51,3 +58,71 @@ header {
 	}
   }
  
+
+@include tablet {
+header {
+		.menu {
+			display: none;
+		}
+		.menu-container {
+			flex-direction: row-reverse;
+			gap: 40px;
+		}
+		.hamburger {
+			display: block;
+			position: relative;
+			z-index: 4;
+			display: flex;
+			width: 45px;
+			flex-direction: column;
+			gap: 10px;
+			cursor: pointer;
+				.menu_line {
+					display: block;
+					background-color: $white-color;
+					width: 100%;
+					height: 2px;
+					transition: all 1s ease-in-out ;
+				}
+				
+				.active-line-1 { 
+					transform: translateX(3px) translateY(11px) rotate(45deg);
+				}
+				.active-line-2 {
+					transform: translateX(100px);
+					opacity: 0;
+				}
+				.active-line-3 {
+					transform: translateX(2px) translateY(-13px) rotate(-45deg);
+				}
+		}
+
+		.mobile-menu {
+			display: flex;
+			justify-content: center;
+			position: fixed;
+			top: 0;
+			left: 100%;
+			z-index: 3;
+			width: 332px;
+			height: 570px;
+			background-color: $main-color;
+			transition: all 0.5s ease-in-out;
+			opacity: 92%;
+			font-family: $font-regular;
+			font-size: 20px;
+			line-height: 350%;
+			font-weight: 300;
+		}
+		.mobile-menu.active {
+			left: 470px;
+			
+		}
+		.link-container-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		}
+	}
+}

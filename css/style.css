@@ -34,6 +34,9 @@ header {
 header .hamburger {
   display: none;
 }
+header .mobile-menu {
+  display: none;
+}
 header .name-text {
   color: #FFFFFF;
   text-decoration: none;
@@ -47,6 +50,9 @@ header .menu-container {
   flex-direction: row;
   align-items: center;
   gap: 30px;
+}
+header .menu-container .header_logo {
+  z-index: 3;
 }
 header .menu {
   font-family: "Inter", sans-serif;
@@ -67,6 +73,68 @@ header .menu_link:hover {
   color: #BB945F;
 }
 
+@media (max-width: 768px) {
+  header .menu {
+    display: none;
+  }
+  header .menu-container {
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+  header .hamburger {
+    display: block;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    width: 45px;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+  }
+  header .hamburger .menu_line {
+    display: block;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 2px;
+    transition: all 1s ease-in-out;
+  }
+  header .hamburger .active-line-1 {
+    transform: translateX(3px) translateY(11px) rotate(45deg);
+  }
+  header .hamburger .active-line-2 {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  header .hamburger .active-line-3 {
+    transform: translateX(2px) translateY(-13px) rotate(-45deg);
+  }
+  header .mobile-menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 3;
+    width: 332px;
+    height: 570px;
+    background-color: #0C0C0E;
+    transition: all 0.5s ease-in-out;
+    opacity: 92%;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 350%;
+    font-weight: 300;
+  }
+  header .mobile-menu.active {
+    left: 470px;
+  }
+  header .link-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .welcome {
   min-height: 600px;
   background: url("/img/welcome_bg.jpg") center center/cover no-repeat;
@@ -81,7 +149,7 @@ header .menu_link:hover {
 .welcome .welcome-text {
   width: 600px;
   height: 220px;
-  background-color: #000000;
+  background-color: #0C0C0E;
   padding: 33px 110px 40px 115px;
   margin-top: -80px;
 }
@@ -655,5 +723,10 @@ footer {
   margin-top: 30px;
 }
 
-/* 768
-*/
+/* .zhopa {
+    background-color: white;
+
+    @include tablet {
+        background-color: black;
+    }
+} */
