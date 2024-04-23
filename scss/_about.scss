@@ -45,12 +45,15 @@
 	  gap: 17px;
 	  align-items: flex-end;
 	  flex-direction: row;
-	  flex-wrap: wrap;
+	  /* flex-wrap: wrap; */
 	  justify-content: space-evenly;
 	}
   
 	.carousel-pagination {
-	  margin-top: 15px;
+		margin-top: 55px;
+		display: flex;
+		justify-content: center;
+		gap: 10px;
 	}
   
 	button {
@@ -68,4 +71,27 @@
 	.slide-pagination-hide {
 		display: none;
 	}
+
+	.slide-4,.slide-5 {
+		display: none;
+	}
   }
+
+
+
+@include tablet {
+	.about {
+		min-height: 862px;
+	}
+
+	.carousel {
+		.slide-2,.slide-3,.slide-4,.slide-5 {
+			display: none;
+		}
+
+		.slide-pagination-hide {
+			display: block;
+		}
+	}
+
+}

@@ -105,3 +105,18 @@
     flex-wrap: nowrap;
 }
 
+@include tablet {
+
+  .shop {
+    max-height: 1481px;
+  }
+
+  .prices {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .prices-desserts {
+    width: auto;
+  }
+}

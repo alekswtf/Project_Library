@@ -107,15 +107,17 @@ header {
 			width: 332px;
 			height: 570px;
 			background-color: $main-color;
-			transition: all 0.5s ease-in-out;
-			opacity: 92%;
-			font-family: $font-regular;
-			font-size: 20px;
+			transition: all 0.5s ease-in-out;		
+			font: {
+				family: $font-regular;
+				size: 20px;
+				weight: 300;
+			}
 			line-height: 350%;
-			font-weight: 300;
 		}
+
 		.mobile-menu.active {
-			left: 470px;
+			left: 434px;
 			
 		}
 		.link-container-mobile {

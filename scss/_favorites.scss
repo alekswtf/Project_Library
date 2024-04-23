@@ -178,3 +178,23 @@
 		cursor: pointer;
 	}
 }
+
+
+@include tablet {
+
+	.favorites {
+		max-height: 2630px;
+	}
+
+	.book-cards {
+		grid-template-columns: repeat(1, 1fr);
+		justify-items: center;
+	}
+
+	.radio-box {
+		gap: 0;
+		justify-content: space-between;
+	}
+
+	
+}
