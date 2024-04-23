@@ -98,6 +98,7 @@
       letter-spacing: 0.05em;
       font-weight: bold;
       font-family: $font-regular;
+      color: $main-color;
     }
 }
 
@@ -139,7 +140,7 @@
       weight:bold;
     }
     letter-spacing: 0.1em;
-    color: #0c0c0e;
+    color: $main-color;
     border: 1px solid $main-color;
     border-radius: 2px;
     width: 75px;

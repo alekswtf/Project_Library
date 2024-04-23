@@ -515,7 +515,7 @@ input[type=radio]:checked::before {
   max-height: 575px;
   background-color: #FFFFFF;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 55px;
   padding: 20px;
 }
 .contacts h2 {
@@ -678,6 +678,7 @@ input[type=radio]:checked::before {
   letter-spacing: 0.05em;
   font-weight: bold;
   font-family: "Inter", sans-serif;
+  color: #0C0C0E;
 }
 
 .get-card {
@@ -711,7 +712,7 @@ input[type=radio]:checked::before {
   font-size: 10px;
   font-weight: bold;
   letter-spacing: 0.1em;
-  color: #0c0c0e;
+  color: #0C0C0E;
   border: 1px solid #0C0C0E;
   border-radius: 2px;
   width: 75px;
