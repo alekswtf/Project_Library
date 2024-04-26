@@ -25,7 +25,7 @@
 	  line-height: 200%;
 	  text-align: center;
 	  color: $black-color;
-	  
+	  margin-top: 30px;
 	}
   
 	hr {
@@ -33,48 +33,64 @@
 	  border: 1px solid $main-color;
 	  margin-top: 30px;
 	}
+	
+	.buttons {
+		display: none;
+	}
+
   }
   
   .carousel {
 	margin-top: 20px;
-  
+	position: relative;
+    width: 100%;
+	overflow: hidden;
+
 	.carousel-inner {
 	  position: relative;
+	  width: 100%;
 	  margin: 0 auto;
 	  display: flex;
-	  gap: 17px;
+	  gap: 20px;
 	  align-items: flex-end;
 	  flex-direction: row;
-	  /* flex-wrap: wrap; */
-	  justify-content: space-evenly;
+	  transition: transform 0.5s;
 	}
-  
-	.carousel-pagination {
-		margin-top: 55px;
+	
+	.slide {
+		position: relative;
+		transition: right 0.5s ease;
+	}
+
+
+	.carousel-dots {
+		margin-top: 45px;
 		display: flex;
 		justify-content: center;
 		gap: 10px;
+		
+		.slide-dot {
+			width: 16px;
+	  		height: 16px;
+			border-radius: 50%;
+	  		background-color: $main-color;
+	  		border: none;
+			&.active {
+				background-color: $brown-color;
+			}
+		}
 	}
   
-	button {
-	  display: inline-block;
-	  border-radius: 50%;
-	  width: 16px;
-	  height: 16px;
-	  background-color: $main-color;
-	  border: none;
-	  &:hover {
-		background-color: $brown-color;
-		cursor: pointer;
-	  }
-	}
-	.slide-pagination-hide {
+
+	[attr="3"],
+	[attr="4"] {
 		display: none;
 	}
 
-	.slide-4,.slide-5 {
+	/* .slide:nth-child(4),
+	.slide:nth-child(5) {
 		display: none;
-	}
+	} */
   }
 
 
@@ -82,16 +98,88 @@
 @include tablet {
 	.about {
 		min-height: 862px;
+		.buttons {
+			display: flex;
+			position: absolute;
+			top: 115%;
+			width: 96%;
+			justify-content: space-between;
+			#prev, #next {
+				width: 24px;
+				height: 24px;
+				border: none;
+				cursor: pointer;
+			}
+			#prev {
+				background: url('/icons/Carret_Left.png') no-repeat;
+			}
+			#next {
+				background: url('/icons/Carret_Right.png') no-repeat;
+			}
+		}
 	}
 
 	.carousel {
-		.slide-2,.slide-3,.slide-4,.slide-5 {
-			display: none;
+		width: 465px;
+		
+		.carousel-inner {
+			margin-left: 0;
+			display: flex;
+        	flex-direction: row;
+        	justify-content: space-around;
+		}
+		.carousel-dots {
+			margin-top: 25px;
 		}
 
-		.slide-pagination-hide {
+		.slide:nth-child(2),
+		.slide:nth-child(3),
+		.slide:nth-child(4),
+		.slide:nth-child(5) {
 			display: block;
 		}
+
+		[attr="3"],
+		[attr="4"] {
+			display: block;
+		}
+		
 	}
 
 }
+
+/* @keyframes next1 {
+	from {
+		left: 0%
+	}
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes next2 {
+	from {
+		left: 100%
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes prev1 {
+	from {
+		left: 0%
+	}
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes prev2 {
+	from {
+		left: -100%
+	}
+	to {
+		left: 0%;
+	}
+} */

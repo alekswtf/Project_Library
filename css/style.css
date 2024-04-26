@@ -186,48 +186,59 @@ header .menu_link:hover {
   line-height: 200%;
   text-align: center;
   color: #000000;
+  margin-top: 30px;
 }
 .about hr {
   width: 50px;
   border: 1px solid #0C0C0E;
   margin-top: 30px;
 }
+.about .buttons {
+  display: none;
+}
 
 .carousel {
   margin-top: 20px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* .slide:nth-child(4),
+  .slide:nth-child(5) {
+  	display: none;
+  } */
 }
 .carousel .carousel-inner {
   position: relative;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  gap: 17px;
+  gap: 20px;
   align-items: flex-end;
   flex-direction: row;
-  /* flex-wrap: wrap; */
-  justify-content: space-evenly;
+  transition: transform 0.5s;
 }
-.carousel .carousel-pagination {
-  margin-top: 55px;
+.carousel .slide {
+  position: relative;
+  transition: right 0.5s ease;
+}
+.carousel .carousel-dots {
+  margin-top: 45px;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-.carousel button {
-  display: inline-block;
-  border-radius: 50%;
+.carousel .carousel-dots .slide-dot {
   width: 16px;
   height: 16px;
+  border-radius: 50%;
   background-color: #0C0C0E;
   border: none;
 }
-.carousel button:hover {
+.carousel .carousel-dots .slide-dot.active {
   background-color: #BB945F;
-  cursor: pointer;
 }
-.carousel .slide-pagination-hide {
-  display: none;
-}
-.carousel .slide-4, .carousel .slide-5 {
+.carousel [attr="3"],
+.carousel [attr="4"] {
   display: none;
 }
 
@@ -235,13 +246,83 @@ header .menu_link:hover {
   .about {
     min-height: 862px;
   }
-  .carousel .slide-2, .carousel .slide-3, .carousel .slide-4, .carousel .slide-5 {
-    display: none;
+  .about .buttons {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    width: 96%;
+    justify-content: space-between;
   }
-  .carousel .slide-pagination-hide {
+  .about .buttons #prev, .about .buttons #next {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  .about .buttons #prev {
+    background: url("/icons/Carret_Left.png") no-repeat;
+  }
+  .about .buttons #next {
+    background: url("/icons/Carret_Right.png") no-repeat;
+  }
+  .carousel {
+    width: 465px;
+  }
+  .carousel .carousel-inner {
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .carousel .carousel-dots {
+    margin-top: 25px;
+  }
+  .carousel .slide:nth-child(2),
+  .carousel .slide:nth-child(3),
+  .carousel .slide:nth-child(4),
+  .carousel .slide:nth-child(5) {
+    display: block;
+  }
+  .carousel [attr="3"],
+  .carousel [attr="4"] {
     display: block;
   }
 }
+/* @keyframes next1 {
+	from {
+		left: 0%
+	}
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes next2 {
+	from {
+		left: 100%
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes prev1 {
+	from {
+		left: 0%
+	}
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes prev2 {
+	from {
+		left: -100%
+	}
+	to {
+		left: 0%;
+	}
+} */
 .favorites {
   background-color: #FFFFFF;
   max-height: 1440px;
@@ -322,19 +403,27 @@ input[type=radio]:checked::before {
   column-gap: 200px;
   row-gap: 40px;
 }
+.book-cards .card:nth-child(n+5) {
+  display: none;
+}
 
 .card {
   width: 555px;
   height: 555px;
   border: solid 1px #000000;
   padding: 15px;
+  /* 	opacity: 0;
+  	transition: opacity 0.3s ease-in-out;
+  	&.active {
+  		opacity: 1;
+  	}  */
 }
 .card img {
   width: 200px;
   height: 300px;
   position: relative;
   left: 217px;
-  bottom: 288px;
+  bottom: 287px;
 }
 
 .card-info {
@@ -668,7 +757,7 @@ input[type=radio]:checked::before {
   line-height: 167%;
   letter-spacing: 0.02em;
 }
-.card-form button {
+.card-form .card-submit-button {
   border: 1px solid #0C0C0E;
   border-radius: 2px;
   padding: 10px 40px;
@@ -730,7 +819,7 @@ input[type=radio]:checked::before {
   }
   .get-card {
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .get-card .get-text {
     text-align: center;

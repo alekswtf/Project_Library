@@ -88,7 +88,7 @@
       letter-spacing: 0.02em;
     }
 
-    button {
+    .card-submit-button {
       border: 1px solid $main-color;
       border-radius: 2px;
       padding: 10px 40px;
@@ -162,7 +162,7 @@
 
   .get-card {
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
       .get-text {
         text-align: center;
         width: 600px;

@@ -74,30 +74,36 @@
           <div  class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</div>
       <div class="carousel">
         <div class="carousel-inner">
-          <div class="slide-1">
-            <img src="/img/carousel/image_1.png" alt="slide-1">
+          <div class="slide">
+            <img src="/img/carousel/image_1.png" class="active" alt="slide-1">
           </div>
-          <div class="slide-2">
+          <div class="slide">
             <img src="/img/carousel/image_2.png" alt="slide-2">
           </div>
-          <div class="slide-3">
+          <div class="slide">
             <img src="/img/carousel/image_3.png" alt="slide-3">
           </div>
-          <div class="slide-4">
+          <div class="slide">
             <img src="/img/carousel/image_4.png" alt="slide-4">
           </div>
-          <div class="slide-5">
+          <div class="slide">
             <img src="/img/carousel/image_5.png" alt="slide-5">
           </div>
+        </div>
 
+
+        <div class="carousel-dots">
+          <button class="slide-dot active" attr="0"></button>
+          <button class="slide-dot" attr="1"></button>
+          <button class="slide-dot" attr="2"></button>
+          <button class="slide-dot" attr="3"></button>
+          <button class="slide-dot" attr="4"></button>
         </div>
-        <div class="carousel-pagination">
-          <button class="slide-pagination"></button>
-          <button class="slide-pagination"></button>
-          <button class="slide-pagination"></button>
-          <button class="slide-pagination-hide"></button>
-          <button class="slide-pagination-hide"></button>
-        </div>
+        
+      </div>
+      <div class="buttons">
+        <button id="prev"></button>
+        <button id="next"></button>
       </div>
     </section>
   </div>
@@ -112,29 +118,29 @@
             <legend>Pick favorites of season</legend>
           
             <div>
-              <input type="radio" id="winter" name="seasone" value="1" checked>
+              <input type="radio" id="winter" name="seasone" value="winter" checked>
               <label for="winter">Winter</label>
             </div>
           
             <div>
-              <input type="radio" id="spring" name="seasone" value="2">
+              <input type="radio" id="spring" name="seasone" value="spring">
               <label for="spring">Spring</label>
             </div>
           
             <div>
-              <input type="radio" id="summer" name="seasone" value="3">
+              <input type="radio" id="summer" name="seasone" value="summer">
               <label for="summer">Summer</label>
             </div>
 
             <div>
-              <input type="radio" id="autumn" name="seasone" value="4">
+              <input type="radio" id="autumn" name="seasone" value="autumn">
               <label for="autumn">Autumn</label>
             </div>
           </fieldset>
       </div>  
 
       <div class="book-cards">
-        <div class="card">
+        <div class="card winter active">
           <div class="card-info">
                 <h3>Staff Picks</h3>
                 <hr>
@@ -148,7 +154,7 @@
                 <img src="./img/books/winter/book_1.png" alt="book-1">
         </div>
 
-        <div class="card">
+        <div class="card winter active">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -161,7 +167,7 @@
               <img src="./img/books/winter/book_2.png" alt="book-2">
         </div>
 
-        <div class="card">
+        <div class="card winter active">
           <div class="card-info">   
               <h3>Staff Picks</h3>
               <hr>
@@ -173,7 +179,7 @@
               <img src="./img/books/winter/book_3.png" alt="book-3">
         </div>
 
-        <div class="card">
+        <div class="card winter active">
           <div class="card-info">  
               <h3>Staff Picks</h3>
               <hr>
@@ -185,7 +191,7 @@
               <img src="./img/books/winter/book_4.png" alt="book-4">
         </div>
 
-        <!-- <div class="card">
+        <div class="card spring">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -197,7 +203,7 @@
               <img src="./img/books/spring/book_1.png" alt="book-1">
         </div>
 
-        <div class="card">
+        <div class="card spring">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -209,7 +215,7 @@
               <img src="./img/books/spring/book_2.png" alt="book-2">
         </div>
 
-        <div class="card">
+        <div class="card spring">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -221,7 +227,7 @@
               <img src="./img/books/spring/book_3.png" alt="book-3">
         </div>
 
-        <div class="card">
+        <div class="card spring">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -233,7 +239,7 @@
               <img src="./img/books/spring/book_4.png" alt="book-4">
         </div>
 
-        <div class="card">
+        <div class="card summer">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -245,7 +251,7 @@
               <img src="./img/books/summer/book_1.png" alt="book-1">
         </div>
 
-        <div class="card">
+        <div class="card summer">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -257,7 +263,7 @@
               <img src="./img/books/summer/book_2.png" alt="book-2">
         </div>
 
-        <div class="card">
+        <div class="card summer">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -269,7 +275,7 @@
               <img src="./img/books/summer/book_3.png" alt="book-3">
         </div>
 
-        <div class="card">
+        <div class="card summer">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -281,7 +287,7 @@
               <img src="./img/books/summer/book_4.png" alt="book-4">
         </div>
 
-        <div class="card">
+        <div class="card autumn">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -293,7 +299,7 @@
               <img src="./img/books/autumn/book_1.png" alt="book-1">
         </div>
 
-        <div class="card">
+        <div class="card autumn">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -305,7 +311,7 @@
               <img src="./img/books/autumn/book_2.png" alt="book-2">
         </div>
 
-        <div class="card">
+        <div class="card autumn">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -317,7 +323,7 @@
               <img src="./img/books/autumn/book_3.png" alt="book-3">
         </div>
 
-        <div class="card">
+        <div class="card autumn">
           <div class="card-info">
               <h3>Staff Picks</h3>
               <hr>
@@ -327,7 +333,7 @@
               <button class="card-button">Buy</button>
           </div>    
               <img src="./img/books/autumn/book_4.png" alt="book-4">
-        </div> -->
+        </div>
       </div>
     </section>
   </div>
@@ -523,7 +529,7 @@
       <div class="footer-rss">
         <span>2023</span>
         <span>The Rolling Scopes School</span>
-        <span>Username</span>
+        <span>Aleksey_Wtf</span>
       </div>
 
     </div>
