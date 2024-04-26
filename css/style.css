@@ -257,11 +257,12 @@ header .menu_link:hover {
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
   }
   .wrapper .buttons {
     display: flex;
     position: absolute;
-    top: 115%;
+    top: 45%;
     width: 90%;
     justify-content: space-between;
   }
