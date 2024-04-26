@@ -193,14 +193,21 @@ header .menu_link:hover {
   border: 1px solid #0C0C0E;
   margin-top: 30px;
 }
-.about .buttons {
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .buttons {
   display: none;
 }
 
 .carousel {
   margin-top: 20px;
   position: relative;
-  width: 100%;
+  width: 1400px;
   overflow: hidden;
   /* .slide:nth-child(4),
   .slide:nth-child(5) {
@@ -246,23 +253,29 @@ header .menu_link:hover {
   .about {
     min-height: 862px;
   }
-  .about .buttons {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper .buttons {
     display: flex;
     position: absolute;
     top: 115%;
-    width: 96%;
+    width: 90%;
     justify-content: space-between;
   }
-  .about .buttons #prev, .about .buttons #next {
+  .wrapper .buttons #prev, .wrapper .buttons #next {
     width: 24px;
     height: 24px;
     border: none;
     cursor: pointer;
+    background: transparent;
   }
-  .about .buttons #prev {
+  .wrapper .buttons #prev {
     background: url("/icons/Carret_Left.png") no-repeat;
   }
-  .about .buttons #next {
+  .wrapper .buttons #next {
     background: url("/icons/Carret_Right.png") no-repeat;
   }
   .carousel {
