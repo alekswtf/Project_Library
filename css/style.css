@@ -414,7 +414,7 @@ input[type=radio]:checked::before {
   column-gap: 200px;
   row-gap: 40px;
 }
-.book-cards .card:nth-child(n+5) {
+.book-cards .hidden {
   display: none;
 }
 
@@ -423,11 +423,13 @@ input[type=radio]:checked::before {
   height: 555px;
   border: solid 1px #000000;
   padding: 15px;
-  /* opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  &.active {
-  	opacity: 1;
-  } */
+  transition: opacity 0.5s ease;
+  pointer-events: auto;
+  opacity: 0;
+}
+.card.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 .card img {
   width: 200px;

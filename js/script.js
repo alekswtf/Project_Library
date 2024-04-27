@@ -97,12 +97,13 @@ moveToSlide(currentSlide);
 
 // books
 
+
 const radioBtns = document.querySelectorAll('input[name="seasone"]');
 const bookCards = document.querySelectorAll('.book-cards .card');
 
 bookCards.forEach((card) => {
   if (!card.classList.contains('active')) {
-    card.style.display = 'none';
+    card.classList.add('hidden');
   }
 });
 
@@ -111,16 +112,25 @@ radioBtns.forEach((btn) => {
     const selectedSeason = btn.value;
 
     bookCards.forEach((card) => {
-      card.style.display = 'none';
-    });
-
-    bookCards.forEach((card) => {
-      if (card.classList.contains(selectedSeason)) {
-        card.style.display = 'block';
+      if (!card.classList.contains(selectedSeason)) {
+        card.classList.add('hidden');
+      } else {
+        card.classList.remove('hidden');
       }
     });
+
+    setTimeout(() => {
+      bookCards.forEach((card) => {
+        if (card.classList.contains(selectedSeason)) {
+          card.style.opacity = '1';
+        } else {
+          card.style.opacity = '0';
+        }
+      });
+    }, 100);
   });
 });
+
 
 
 

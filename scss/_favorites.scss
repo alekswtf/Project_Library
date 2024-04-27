@@ -90,11 +90,9 @@
     grid-template-rows: repeat(2, auto);
     column-gap: 200px;
     row-gap: 40px;
-
-	.card:nth-child(n+5) {
+	.hidden {
 		display: none;
-	  }
-	
+	}
 }
 
 .card {
@@ -102,11 +100,13 @@
 	height: 555px;
 	border: solid 1px $black-color;
 	padding: 15px;
-	/* opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.5s ease;
+	pointer-events: auto;
+	opacity: 0;
 	&.active {
 		opacity: 1;
-	} */ 	
+		transition: opacity 0.5s ease-in-out;
+	}
 
 	img {
 		width: 200px;
