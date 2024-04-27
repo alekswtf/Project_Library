@@ -18,6 +18,7 @@ header {
 	  color: $white-color;
 	  text-decoration: none;
 	  letter-spacing: 0.02em;
+	  padding-right: 20px;
 	  font: {
 		family: $font-title;
 		size: 30px;
@@ -42,6 +43,7 @@ header {
 	  list-style-type: none;
 	  gap: 30px;
 	  display: flex;
+	  align-items: center;
   
 	  &_link {
 		color: $white-color;
@@ -58,6 +60,9 @@ header {
 	}
   }
  
+@include laptop {
+
+}
 
 @include tablet {
 header {
@@ -128,3 +133,4 @@ header {
 		}
 	}
 }
+

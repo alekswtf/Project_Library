@@ -41,6 +41,7 @@ header .name-text {
   color: #FFFFFF;
   text-decoration: none;
   letter-spacing: 0.02em;
+  padding-right: 20px;
   font-family: "Forum", sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -60,6 +61,7 @@ header .menu {
   list-style-type: none;
   gap: 30px;
   display: flex;
+  align-items: center;
 }
 header .menu_link {
   color: #FFFFFF;
@@ -209,10 +211,6 @@ header .menu_link:hover {
   position: relative;
   width: 1400px;
   overflow: hidden;
-  /* .slide:nth-child(4),
-  .slide:nth-child(5) {
-  	display: none;
-  } */
 }
 .carousel .carousel-inner {
   position: relative;
@@ -895,11 +893,3 @@ footer {
   letter-spacing: 0.1em;
   margin-top: 30px;
 }
-
-/* .zhopa {
-    background-color: white;
-
-    @include tablet {
-        background-color: black;
-    }
-} */

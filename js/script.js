@@ -97,39 +97,32 @@ moveToSlide(currentSlide);
 
 // books
 
-const radioInp = document.querySelectorAll('.radio-container input[type="radio"]');
+const radioBtns = document.querySelectorAll('input[name="seasone"]');
 const bookCards = document.querySelectorAll('.book-cards .card');
 
+bookCards.forEach((card) => {
+  if (!card.classList.contains('active')) {
+    card.style.display = 'none';
+  }
+});
 
-radioInp.forEach((radio) => {
-  radio.addEventListener('change', () => {
-      const season = radio.value
-      bookCards.forEach((book) => {
-          if (book.classList.contains(season)) {
-              book.style.display = 'block'
-          } else {
-              book.style.display = 'none'
-          }
-      })
-  })
-})
+radioBtns.forEach((btn) => {
+  btn.addEventListener('change', () => {
+    const selectedSeason = btn.value;
 
+    bookCards.forEach((card) => {
+      card.style.display = 'none';
+    });
 
-/* const radioInp = document.querySelectorAll('.radio-container input[type="radio"]');
-const bookCards = document.querySelectorAll('.book-cards .card');
-
-radioInp.forEach((radio) => {
-  radio.addEventListener('change', () => {
-    const season = radio.value;
-    bookCards.forEach((book) => {
-      if (book.classList.contains(season)) {
-        book.classList.add('active');
-      } else {
-        book.classList.remove('active');
+    bookCards.forEach((card) => {
+      if (card.classList.contains(selectedSeason)) {
+        card.style.display = 'block';
       }
     });
   });
-}); */
+});
+
+
 
 
 //

@@ -1,5 +1,16 @@
+@mixin laptop {
+    @media (max-width: map-get($breakpoints, "laptop")) {
+        @content;
+    }
+
+   
+};
+
 @mixin tablet {
     @media (max-width: map-get($breakpoints, "tablet")) {
         @content;
     }
 };
+
+
+
