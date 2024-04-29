@@ -21,20 +21,20 @@ document.querySelectorAll('.smooth-scroll').forEach((link) => {
   hamburger.addEventListener('click', () => {
       hamburgerLines.forEach((el, index) => {
           el.classList.toggle(`active-line-${index + 1}`)
-      })
+      });
       
       mobileMenuPanel.classList.toggle('active');
-  })
+  });
   
   mobileMenuLinks.forEach(el => {
       el.addEventListener('click', () => {
           hamburgerLines.forEach((el, index) => {
               el.classList.remove(`active-line-${index + 1}`)
-          })
+          });
   
-          mobileMenuPanel.classList.remove('active')
-      })
-  }) 
+          mobileMenuPanel.classList.remove('active');
+      });
+  });
 
 
 
@@ -74,6 +74,19 @@ function updateDots() {
 }
 
 function prevSlide() {
+  if (currentSlide > 0) {
+    currentSlide--;
+    moveToSlide(currentSlide);
+  }
+}
+
+function nextSlide() {
+  if (currentSlide < slides.length - 1) {
+    currentSlide++;
+    moveToSlide(currentSlide);
+  }
+}
+/* function prevSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   moveToSlide(currentSlide);
 }
@@ -81,7 +94,7 @@ function prevSlide() {
 function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
   moveToSlide(currentSlide);
-}
+} */
 
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
@@ -127,12 +140,11 @@ radioBtns.forEach((btn) => {
           card.style.opacity = '0';
         }
       });
-    }, 100);
+    },200);
   });
 });
 
 
-
-
-
+ 
 //
+

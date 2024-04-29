@@ -1,12 +1,12 @@
 .welcome {
 	min-height: 600px;
-	background: url('/img/welcome_bg.jpg') center (center / cover) no-repeat;
+	background: url('../img/welcome_bg.jpg') center (center / cover) no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
   
 	.welcome-overlay {
-	  background: url('/img/overlay.png');
+	  background: url('../img/overlay.png');
 	  min-height: 300px;
 	}
   
