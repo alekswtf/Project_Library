@@ -76,6 +76,10 @@
 		display: flex;
 		justify-content: center;
 		gap: 10px;
+			button:nth-child(4),
+			button:nth-child(5) {
+				display: none;
+			}
 		
 		.slide-dot {
 			width: 16px;
@@ -83,17 +87,13 @@
 			border-radius: 50%;
 	  		background-color: $main-color;
 	  		border: none;
+			cursor: pointer;
 			&.active {
 				background-color: $brown-color;
 			}
 		}
 	}
   
-
-	[attr="3"],
-	[attr="4"] {
-		display: none;
-	}
 	
   }
 
@@ -142,6 +142,10 @@
 		}
 		.carousel-dots {
 			margin-top: 25px;
+			button:nth-child(4),
+			button:nth-child(5) {
+				display: block;
+			}
 		}
 
 		.slide:nth-child(2),
@@ -149,13 +153,7 @@
 		.slide:nth-child(4),
 		.slide:nth-child(5) {
 			display: block;
-		}
-
-		[attr="3"],
-		[attr="4"] {
-			display: block;
-		}
-		
+		}	
 	}
 
 }

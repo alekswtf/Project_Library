@@ -40,7 +40,11 @@
 	}
 	text-align: start;
 	color: $black-color;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
+	position: sticky;
+    top: 0;
+    background-color: $white-color;
+    z-index: 100;
   }
 
   
@@ -77,6 +81,7 @@
     align-items: center;
 	margin-top: 30px;
     gap: 100px;
+	height: 100px;
 	legend {
 		margin-bottom: 40px;
 		font-weight: bold;
@@ -100,12 +105,12 @@
 	height: 555px;
 	border: solid 1px $black-color;
 	padding: 15px;
-	transition: opacity 0.5s ease;
+	transition: opacity 1s ease;
 	pointer-events: auto;
 	opacity: 0;
 	&.active {
 		opacity: 1;
-		transition: opacity 0.5s ease-in-out;
+		transition: opacity 1s ease;
 	}
 
 	img {

@@ -52,8 +52,66 @@ header .menu-container {
   align-items: center;
   gap: 30px;
 }
-header .menu-container .header_logo {
+header .profile-Menu {
+  display: flex;
+  align-items: center;
+}
+header .profile-dropMenu {
+  position: absolute;
+  width: 80px;
+  height: 115px;
+  background-color: #FFFFFF;
+  transition: all 0.7s ease-in-out;
+  z-index: 4;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  top: -500%;
+  position: absolute;
+  right: 20px;
+}
+header .profile-dropMenu hr {
+  width: 40px;
+  border: 1px solid #BB945F;
+}
+header .profile-dropMenu span {
+  font-weight: 700;
+}
+header .logLinks-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+header .logLinks-wrapper .profile-logIn:hover, header .logLinks-wrapper .profile-reg:hover, header .logLinks-wrapper .profile-LogOut:hover, header .logLinks-wrapper .profile-myProf:hover {
+  cursor: pointer;
+  color: #BB945F;
+}
+header .profile-dropMenu.open {
+  top: 90%;
+  z-index: 4;
+  position: absolute;
+}
+header .profile-dropMenu.open .profile-menuAuth {
+  display: none;
+}
+header .profile-noAuthIcon {
+  position: relative;
   z-index: 3;
+  cursor: pointer;
+}
+header .profile-menuNoAuth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+header .profile-menuAuth, header ._visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 }
 header .menu {
   font-family: "Inter", sans-serif;
@@ -73,6 +131,218 @@ header .menu_link {
 header .menu_link:hover {
   text-decoration: none;
   color: #BB945F;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(10, 10, 12, 0.5);
+}
+
+.modal-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 1001;
+  display: none;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-color: #000000;
+}
+.modal .close {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+.modal h2 {
+  font-family: "Forum", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-color: #000000;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+.modal form {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.modal form input {
+  border: 1px solid #BB945F;
+  width: 200px;
+  height: 20px;
+}
+.modal button {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #0C0C0E;
+  border: 1px solid #0C0C0E;
+  border-radius: 2px;
+  width: 75px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.modal h5 {
+  font-size: 10px;
+}
+.modal .login-link,
+.modal .register-link {
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  color: #0C0C0E;
+  cursor: pointer;
+}
+
+.modal-content-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 262px;
+  background-color: #FFFFFF;
+  padding: 10px;
+}
+
+.modal-content-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  width: 250px;
+  height: 382px;
+  padding: 10px;
+}
+
+.myProfile-card {
+  width: 600px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  font-family: "Inter", sans-serif;
+  background-color: #FFFFFF;
+  display: none;
+}
+.myProfile-card .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.myProfile-card .userProfile {
+  width: 170px;
+  height: 400px;
+  background-color: #0C0C0E;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.myProfile-info {
+  position: relative;
+  right: -170px;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+.myProfile-info h2 {
+  font-family: "Forum", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.myProfile-visits, .myProfile-bonuses, .myProfile-books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #000000;
+}
+.myProfile-visits span, .myProfile-bonuses span, .myProfile-books span {
+  font-size: 10px;
+}
+
+.userCounter-wrapper {
+  display: flex;
+  gap: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #000000;
+}
+
+.myProfile-rented ul {
+  list-style: initial;
+  margin: 30px 0px 0px 40px;
+}
+.myProfile-rented h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 80%;
+  color: #0C0C0E;
+}
+
+.myProfile-cardNumber {
+  display: flex;
+  gap: 15px;
+}
+.myProfile-cardNumber span {
+  color: #BB945F;
+}
+.myProfile-cardNumber img {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -98,7 +368,7 @@ header .menu_link:hover {
     background-color: #FFFFFF;
     width: 100%;
     height: 2px;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   header .hamburger .active-line-1 {
     transform: translateX(3px) translateY(11px) rotate(45deg);
@@ -135,6 +405,12 @@ header .menu_link:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  header .profile-dropMenu {
+    right: 10%;
+  }
+  header .profile-dropMenu.open {
+    right: 10%;
   }
 }
 .welcome {
@@ -233,19 +509,20 @@ header .menu_link:hover {
   justify-content: center;
   gap: 10px;
 }
+.carousel .carousel-dots button:nth-child(4),
+.carousel .carousel-dots button:nth-child(5) {
+  display: none;
+}
 .carousel .carousel-dots .slide-dot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #0C0C0E;
   border: none;
+  cursor: pointer;
 }
 .carousel .carousel-dots .slide-dot.active {
   background-color: #BB945F;
-}
-.carousel [attr="3"],
-.carousel [attr="4"] {
-  display: none;
 }
 
 @media (max-width: 768px) {
@@ -289,14 +566,14 @@ header .menu_link:hover {
   .carousel .carousel-dots {
     margin-top: 25px;
   }
+  .carousel .carousel-dots button:nth-child(4),
+  .carousel .carousel-dots button:nth-child(5) {
+    display: block;
+  }
   .carousel .slide:nth-child(2),
   .carousel .slide:nth-child(3),
   .carousel .slide:nth-child(4),
   .carousel .slide:nth-child(5) {
-    display: block;
-  }
-  .carousel [attr="3"],
-  .carousel [attr="4"] {
     display: block;
   }
 }
@@ -368,7 +645,11 @@ header .menu_link:hover {
   font-size: 20px;
   text-align: start;
   color: #000000;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 100;
 }
 
 input[type=radio] {
@@ -402,6 +683,7 @@ input[type=radio]:checked::before {
   align-items: center;
   margin-top: 30px;
   gap: 100px;
+  height: 100px;
 }
 .radio-box legend {
   margin-bottom: 40px;
@@ -424,13 +706,13 @@ input[type=radio]:checked::before {
   height: 555px;
   border: solid 1px #000000;
   padding: 15px;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
   pointer-events: auto;
   opacity: 0;
 }
 .card.active {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease;
 }
 .card img {
   width: 200px;
@@ -823,6 +1105,28 @@ input[type=radio]:checked::before {
   cursor: pointer;
 }
 
+.get-card-profile {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+}
+.get-card-profile .get-title {
+  font-family: "Forum", sans-serif;
+  font-size: 35px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.get-card-profile .get-text {
+  width: 456px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  text-align: right;
+  line-height: 200%;
+}
+
 @media (max-width: 768px) {
   .librarycard {
     max-height: 857px;
@@ -831,11 +1135,11 @@ input[type=radio]:checked::before {
     flex-direction: column;
     align-items: center;
   }
-  .get-card {
+  .get-card, .get-card-profile {
     align-items: center;
     margin-top: 30px;
   }
-  .get-card .get-text {
+  .get-card .get-text, .get-card-profile .get-text {
     text-align: center;
     width: 600px;
   }

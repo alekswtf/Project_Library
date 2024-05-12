@@ -49,9 +49,123 @@
           </div>
 
           </nav>
-          <a href="#" class="header_logo">
-            <img src="./icons/icon_profile.png" alt="logo">
-          </a>
+
+            <div class="modal-overlay" id="modalOverlay">
+              <div class="modal" id="loginModal">
+                <div class="modal-content-login">
+                  <span class="close">
+                    <img src="./icons/close_btn.svg" alt="closeBtn">
+                  </span>
+                  <h2>LOGIN</h2>
+                  <form id="loginForm">
+                    <label for="username">E-mail or readers card</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Log In</button>
+                  </form>
+                  <h5>Don’t have an account?
+                    <span class="register-link">Register</span>
+                  </h5>
+                    
+                </div>
+              </div>
+
+              <div class="modal" id="registerModal">
+                <div class="modal-content-register">
+                  <span class="close">
+                    <img src="./icons/close_btn.svg" alt="closeBtn">
+                  </span>
+                  <h2>Register</h2>
+                  <form id="registrationForm">
+                    <label for="userFirstname">First name</label>
+                    <input type="text" id="userFirstnameReg" name="userFirstname" required>
+                    <label for="userLastname">Last name</label>
+                    <input type="text" id="userLastnameReg" name="userLastname" required>
+                    <label for="userEmailReg">E-mail</label>
+                    <input type="email" id="userEmailReg" name="userEmail" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="passwordReg" name="password" required>
+                    <button type="submit">Sign Up</button>
+                    <h5>Already have an account?
+                      <span class="login-link">Login</span>
+                    </h5>
+                    
+                  </form>
+                </div>
+              </div>
+
+              <div class="myProfile-card">
+                <span class="close">
+                  <img src="./icons/close_btn.svg" alt="closeBtn">
+                </span>
+                <div class="userProfile">
+                  <div class="userAvatar">
+                    <img src="./icons/avatar.png" alt="avatar">
+                  </div>
+                  <div class="userFullName"><!-- John F Doe --></div>          
+                </div>
+                  <div class="myProfile-info">
+                    <h2>MY PROFILE</h2>
+                    <div class="userCounter-wrapper">
+                      <div class="myProfile-visits">
+                        <h4>Visits</h4>
+                        <img src="./icons/Union.svg" alt="union">
+                        <span class="visitsCounter">23</span>
+                      </div>
+                      <div class="myProfile-bonuses">
+                        <h4>Bonuses</h4>
+                        <img src="./icons/Star 1.svg" alt="star">
+                        <span class="bonusesCounter">1240</span>
+                      </div>
+                      <div class="myProfile-books">
+                        <h4>Books</h4>
+                        <img src="./icons/book.svg" alt="booksIcon">
+                        <span class="booksCounter">3</span>
+                      </div>
+                    </div>
+                    
+                  <div class="myProfile-rented">
+                    <h3>Rented books</h3>
+                    <ul class="rentedBooks">
+                      <li>The Last Queen, Clive Irving</li>
+                      <li>Dominicana, Angie Cruz</li>
+                    </ul>
+                  </div>
+                  <div class="myProfile-cardNumber">
+                    <h4>Card number</h4>
+                    <span class="userCardNumber">F00234030</span>
+                    <img src="./icons/icon copy.svg" alt="copyIcon" onclick="copyCardNumber()">
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+
+          <div class="profile-Menu">
+            <div class="profile-noAuthIcon" id="profileIcon">
+              <img src="./icons/icon_profile.png" alt="user-icon">
+            </div>
+              <div class="profile-dropMenu">
+                <div class="profile-AuthIcon"></div>
+                <div class="profile-menuNoAuth">
+                  <span>Profile</span>
+                  <hr>
+                  <div class="logLinks-wrapper">
+                    <div class="profile-logIn">Log In</div>
+                    <div class="profile-reg" >Register</div>
+                  </div>
+                </div>
+                <div class="profile-menuAuth">
+                  <span>Profile</span>
+                  <hr>
+                  <div class="logLinks-wrapper">
+                    <div class="profile-LogOut">Log Out</div>
+                    <div class="profile-myProf" onclick="openProfile()">My profile</div>
+                  </div> 
+                </div>
+              </div>
+          </div>
         </div>
       
 
@@ -101,11 +215,11 @@
 
 
                 <div class="carousel-dots">
-                  <button class="slide-dot active" attr="0"></button>
-                  <button class="slide-dot" attr="1"></button>
-                  <button class="slide-dot" attr="2"></button>
-                  <button class="slide-dot" attr="3"></button>
-                  <button class="slide-dot" attr="4"></button>
+                  <button class="slide-dot active"></button>
+                  <button class="slide-dot"></button>
+                  <button class="slide-dot"></button>
+                  <button class="slide-dot"></button>
+                  <button class="slide-dot"></button>
                 </div>
         
             </div>
@@ -154,7 +268,7 @@
                 <p> An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.       
                 </p>
 
-                <button class="card-button">Buy</button>
+                <button class="card-button" onclick="openLoginModal()">Buy</button>
           </div>      
                 <img src="./img/books/winter/book_1.png" alt="book-1">
         </div>
@@ -167,7 +281,7 @@
               
               <p>Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch. </p>
 
-              <button class="card-button">Buy</button>
+              <button class="card-button" onclick="openLoginModal()">Buy</button>
           </div>    
               <img src="./img/books/winter/book_2.png" alt="book-2">
         </div>
@@ -179,7 +293,7 @@
               <h4>DANTE: POET OF THE SECULAR WORLD <br>By Erich Auerbach</h4>
               
               <p>Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
-              <button class="card-button">Buy</button>
+              <button class="card-button" onclick="openLoginModal()">Buy</button>
           </div>    
               <img src="./img/books/winter/book_3.png" alt="book-3">
         </div>
@@ -191,7 +305,7 @@
               <h4>THE LAST QUENN <br>By Clive Irving</h4>
               
               <p>A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-              <button class="card-button">Buy</button>
+              <button class="card-button" onclick="openLoginModal()">Buy</button>
           </div>    
               <img src="./img/books/winter/book_4.png" alt="book-4">
         </div>
@@ -500,11 +614,26 @@
           </div>
 
           <div class="get-buttons">
-            <button class="signup">Sign Up</button>
-            <button class="login">Log In</button>
+            <button class="signup" onclick="openRegisterModal()">Sign Up</button>
+            <button class="login" onclick="openLoginModal()">Log In</button>
+          </div>
+        </div>
+
+          <div class="get-card-profile">
+            <div class="get-title">
+              <h4>Visit your profile</h4>
+            </div>
+
+            <div class="get-text">
+              <h5>With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.</h5>
+            </div>
+
+            <div class="get-buttons">
+              <button class="MyProfile" onclick="openProfile()">Profile</button>
+            </div>
           </div>
 
-        </div>
+
       </div>
   </section>
 </div>   
