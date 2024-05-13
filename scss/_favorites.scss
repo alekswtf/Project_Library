@@ -185,11 +185,16 @@
 		width: 75px;
 		height: 30px;
 		border: 1px solid $black-color;
+		border-radius: 2px;
 		color: $black-color;
 		line-height: 12px;
 		letter-spacing: 0.1em;
 		text-align: center;
 		cursor: pointer;
+		&:hover {
+			background-color: $brown-color;
+			border: none;
+		}
 	}
 }
 

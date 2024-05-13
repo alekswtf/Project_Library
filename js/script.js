@@ -156,7 +156,8 @@ profileIcon.addEventListener('click', function(event) {
   event.stopPropagation(); 
 });
 
-document.addEventListener('click', function() {
+
+document.addEventListener('click', function(event) {
   dropMenu.classList.remove('open');
 });
 
@@ -406,6 +407,8 @@ function registerUser(firstName, lastName, email, password) {
     profileMenuNoAuth.style.display = 'none';
     profileMenuAuth.style.display = 'flex';
     document.querySelector('.profile-menuAuth').classList.add('._visible');
+    document.querySelector('.get-card').style.display = 'none';
+    document.querySelector('.get-card-profile').style.display = 'flex';
   }
 }
 
@@ -495,25 +498,6 @@ function copyCardNumber() {
 
 
 
-
-/* // Обработчик события для отправки формы входа,как сохранять и выводить нужные данные?
-
-loginForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const email = document.getElementById('userEmail').value;
-  const password = document.getElementById('password').value;
-
-  const userEmail = localStorage.getItem('userEmail');
-  const userPassword = localStorage.getItem('password');
-
-  // Проверяем правильность введенных данных
-  if (email === userEmail && password === userPassword) {
-    closeLoginModal();
-  } else {
-    alert('Invalid email or password');
-  }
-}); */
 
 
 

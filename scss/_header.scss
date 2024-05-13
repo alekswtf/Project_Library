@@ -43,9 +43,8 @@ header {
 		width: 80px;
 		height: 115px;
 		background-color: $white-color;
-		transition: all 0.7s ease-in-out;
 		z-index: 4;	
-		
+		transition: all 0.7s ease-in-out;
 		font: {
 			family: $font-regular;
 			size: 15px;
@@ -94,6 +93,19 @@ header {
     	z-index: 3;
 		cursor: pointer;
 	}
+
+	/* .profile-noAuthIcon {
+		width: 28px;
+		height: 28px;
+		background-color: $white-color;
+		border-radius: 50%;
+		display: block;
+		justify-content: center;
+		align-items: center;
+		color: $brown-color;
+		font-weight: bold;
+	} */
+
 
 	.profile-menuNoAuth {
 		display: flex;
@@ -209,6 +221,10 @@ header {
 		height: 30px;
 		cursor: pointer;
 		margin-top: 15px;
+		&:hover {
+			background-color: $brown-color;
+			border: none;
+		}
 	}
 
 	h5 {
@@ -449,4 +465,3 @@ header {
 		}
 	}
 }
-

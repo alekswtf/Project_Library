@@ -30,6 +30,17 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0px 20px 0px 20px;
+  /* .profile-noAuthIcon {
+  	width: 28px;
+  	height: 28px;
+  	background-color: $white-color;
+  	border-radius: 50%;
+  	display: block;
+  	justify-content: center;
+  	align-items: center;
+  	color: $brown-color;
+  	font-weight: bold;
+  } */
 }
 header .hamburger {
   display: none;
@@ -61,8 +72,8 @@ header .profile-dropMenu {
   width: 80px;
   height: 115px;
   background-color: #FFFFFF;
-  transition: all 0.7s ease-in-out;
   z-index: 4;
+  transition: all 0.7s ease-in-out;
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -203,6 +214,10 @@ header .menu_link:hover {
   height: 30px;
   cursor: pointer;
   margin-top: 15px;
+}
+.modal button:hover {
+  background-color: #BB945F;
+  border: none;
 }
 .modal h5 {
   font-size: 10px;
@@ -771,11 +786,16 @@ input[type=radio]:checked::before {
   width: 75px;
   height: 30px;
   border: 1px solid #000000;
+  border-radius: 2px;
   color: #000000;
   line-height: 12px;
   letter-spacing: 0.1em;
   text-align: center;
   cursor: pointer;
+}
+.card-info .card-button:hover {
+  background-color: #BB945F;
+  border: none;
 }
 
 @media (max-width: 768px) {
@@ -1103,6 +1123,10 @@ input[type=radio]:checked::before {
   width: 75px;
   height: 30px;
   cursor: pointer;
+}
+.get-buttons button:hover {
+  background-color: #BB945F;
+  border: none;
 }
 
 .get-card-profile {
