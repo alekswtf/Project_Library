@@ -156,9 +156,9 @@ profileIcon.addEventListener('click', function(event) {
   event.stopPropagation(); 
 });
 
-
 document.addEventListener('click', function(event) {
   dropMenu.classList.remove('open');
+  event.stopPropagation(); 
 });
 
 
@@ -208,6 +208,7 @@ function showProfile() {
   openProfile();
 }
 
+//Отображание актального имени в профиле
 function showUserProfile(user) {
   document.querySelector('.myProfile-card .userFullName').innerText = `${user.firstName} ${user.lastName}`;
   // остальные данные профиля
@@ -243,13 +244,15 @@ document.querySelector('.myProfile-card .close').addEventListener('click', funct
 });
 
 //  НАДО??
-/* modalOverlay.addEventListener('click', function(event) {
+modalOverlay.addEventListener('click', function(event) {
   if (event.target === modalOverlay) {
     closeLoginModal();
     closeRegisterModal();
     closeProfile();
   }
-}); */
+  event.stopPropagation(); 
+});
+
 
 
 document.querySelector('.modal-content-login .register-link').addEventListener('click', function() {
@@ -273,34 +276,6 @@ let users = [
 
 
 
-/* loginForm.addEventListener('submit', function(event) {
-  event.preventDefault(); 
-
-  const email = document.getElementById('userEmail').value;
-  const password = document.getElementById('password').value;
-
-
-  if (email === 'wtf@wtf.com' && password === 'wtf') {
-    // добавить смену иконки!!!
-    closeLoginModal();
-    profileMenuNoAuth.style.display = 'none';
-    profileMenuAuth.style.display = 'flex';
-    document.querySelector('.profile-menuAuth').classList.add('._visible');
-
-    localStorage.setItem('userEmail', email);
-    showProfile(); 
-
-    document.querySelector('.get-card').style.display = 'none';
-    document.querySelector('.get-card-profile').style.display = 'flex';
-
-  } else {
-    alert('Invalid email or password');
-  }
-
-}); */
-
-
-
 function loginUser(email, password) {
 
     let user = users.find(user => user.email === email && user.password === password);
@@ -321,8 +296,11 @@ function loginUser(email, password) {
        // добавить смену иконки!
       closeLoginModal();
       showUserProfile(user);
-      profileMenuNoAuth.style.display = 'none';
-      profileMenuAuth.style.display = 'flex';
+      profileMenuNoAuth.style.opacity = '0';
+      profileMenuNoAuth.style.visibility = 'hidden';
+
+      profileMenuAuth.style.opacity = '1';
+      profileMenuAuth.style.visibility = 'visible';
       document.querySelector('.profile-menuAuth').classList.add('._visible');
 
       document.querySelector('.get-card').style.display = 'none';
@@ -404,8 +382,12 @@ function registerUser(firstName, lastName, email, password) {
     localStorage.setItem(email, JSON.stringify(storedUsers));
     closeRegisterModal();
     showUserProfile(newUser);
-    profileMenuNoAuth.style.display = 'none';
-    profileMenuAuth.style.display = 'flex';
+    profileMenuNoAuth.style.opacity = '0';
+    profileMenuNoAuth.style.visibility = 'hidden';
+
+    profileMenuAuth.style.opacity = '1';
+    profileMenuAuth.style.visibility = 'visible';
+    
     document.querySelector('.profile-menuAuth').classList.add('._visible');
     document.querySelector('.get-card').style.display = 'none';
     document.querySelector('.get-card-profile').style.display = 'flex';
@@ -471,8 +453,11 @@ document.querySelector('.profile-LogOut').addEventListener('click', function(eve
   localStorage.removeItem('userEmail');
   closeLoginModal();
   
-  profileMenuNoAuth.style.display = 'flex';
-  profileMenuAuth.style.display = 'none';
+  profileMenuNoAuth.style.opacity = '1';
+  profileMenuNoAuth.style.visibility = 'visible';
+
+  profileMenuAuth.style.opacity = '0';
+  profileMenuAuth.style.visibility = 'hidden';
   document.querySelector('.profile-menuAuth').classList.remove('._visible');
   
    document.querySelector('.get-card-profile').style.display = 'none';
